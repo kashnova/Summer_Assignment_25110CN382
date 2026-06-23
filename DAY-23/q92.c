@@ -14,7 +14,7 @@ int main()
     }
     for (i = 0; i < 256; i++)
     {
-        if (freq[i] > max)
+        if (freq[i] >max)
         {
             max = freq[i];
             max_char = (char)i;
