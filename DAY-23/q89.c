@@ -12,7 +12,7 @@ int main()
         count = 0;
         for (j = 0; str[j] != '\n' && str[j] != '\0'; j++)
         {
-            if ((unsigned char)str[i] == (unsigned char)str[j])
+            if (str[i] == str[j])
             {
                 count++;
             }
