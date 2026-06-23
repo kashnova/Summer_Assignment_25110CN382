@@ -3,7 +3,7 @@
 int main()
 {
     int i;
-    char str[100], max_char;
+    char str[100], max_char = '\0';
     int freq[256] = {0};
     int max = 0;
     printf("Enter the string:\n");
