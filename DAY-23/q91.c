@@ -4,7 +4,7 @@
 void sortstring(char str[])
 {
     int i, j;
-    int temp;
+    char temp;
     int len = strlen(str);
     for (i = 0; i < len - 1; i++)
     {
