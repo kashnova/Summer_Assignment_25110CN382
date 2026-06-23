@@ -38,7 +38,7 @@ int main()
     sortstring(str2);
     if (strcmp(str1, str2) == 0)
     {
-        printf("String is anagram.\n");
+     printf("String is anagram.\n");
     }
     else
     {
