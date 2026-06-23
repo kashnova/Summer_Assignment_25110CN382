@@ -6,7 +6,7 @@ int main()
     char str[100], max_char = '\0';
     int freq[256] = {0};
     int max = 0;
-    printf("Enter the string:\n");
+    printf("Enter the string: \n");
     fgets(str, sizeof(str), stdin);
     for (i = 0; str[i] != '\n' && str[i] != '\0'; i++)
     {
