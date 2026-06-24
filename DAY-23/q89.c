@@ -2,8 +2,8 @@
 #include <stdio.h>
 int main()
 {
-    int i,j;
-    int count =0;
+    int i, j;
+    int count = 0;
     char str[100];
     printf("Enter the string:\n");
     fgets(str, sizeof(str), stdin);

@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-    int i,j;
+    int i, j;
     char str[100];
     int count = 0, max = 0;
     char max_char = '\0';

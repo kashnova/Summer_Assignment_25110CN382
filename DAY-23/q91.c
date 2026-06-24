@@ -3,7 +3,7 @@
 #include <string.h>
 void sortstring(char str[])
 {
-    int i,j;
+    int i, j;
     char temp;
     int len = strlen(str);
     for (i = 0; i < len - 1; i++)

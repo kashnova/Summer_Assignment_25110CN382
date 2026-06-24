@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-    int i,j;
+    int i, j;
     char str[100];
     printf("Enter the string:\n");
     fgets(str, sizeof(str), stdin);
@@ -19,4 +19,4 @@ int main()
     }
     printf("First repeating character does not exist.\n");
     return 0;
- }
+}
