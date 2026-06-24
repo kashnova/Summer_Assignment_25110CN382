@@ -19,4 +19,4 @@ int main()
     }
     printf("First repeating character does not exist.\n");
     return 0;
-}
+ }

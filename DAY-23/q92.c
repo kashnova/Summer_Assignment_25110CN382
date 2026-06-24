@@ -2,23 +2,27 @@
 #include <stdio.h>
 int main()
 {
-    int i;
-    char str[100], max_char ='\0';
-    int freq[256] = {0};
-    int max = 0;
+    int i,j;
+    char str[100];
+    int count = 0, max = 0;
+    char max_char = '\0';
     printf("Enter the string: \n");
     fgets(str, sizeof(str), stdin);
     for (i = 0; str[i] != '\n' && str[i] != '\0'; i++)
     {
-        freq[(unsigned char)str[i]]++;
-    }
-    for (i = 0; i < 256; i++)
-    {
-        if (freq[i] >max)
+        for (j = 0; str[j] != '\n' && str[j] != '\0'; j++)
         {
-            max = freq[i];
-            max_char = (char)i;
+            if (str[i] == str[j])
+            {
+                count++;
+            }
         }
+        if (count > max)
+        {
+            max = count;
+            max_char = str[i];
+        }
+        count = 0;
     }
     printf("The maximum occuring character is: %c", max_char);
     return 0;
