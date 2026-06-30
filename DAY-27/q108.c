@@ -1,4 +1,4 @@
-// Write a program to  create marksheet generation system.
+// Write a program to create marksheet generation system.
 
 #include <stdio.h>
 #include <string.h>
