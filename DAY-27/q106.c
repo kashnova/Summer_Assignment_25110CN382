@@ -1,5 +1,4 @@
 // Write a program to create employee management system.
-
 #include <stdio.h>
 #include <string.h>
 

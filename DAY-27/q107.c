@@ -1,6 +1,7 @@
 // Write a program to create salary management system.
 #include <stdio.h>
 #include <string.h>
+
 struct employee
 {
     char name[50];

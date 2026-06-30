@@ -15,10 +15,11 @@ struct Student
 int main()
 {
     struct Student s[100];
-    int n, i;
+    int n, i, j;
     int choice;
     int search;
     int update;
+    int del;
     int found;
 
     printf("Enter the number of students:\n");
@@ -33,13 +34,12 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        printf("Enter the name of student:\n");
+        printf("Enter student name:\n");
         fgets(s[i].student_name, sizeof(s[i].student_name), stdin);
         s[i].student_name[strcspn(s[i].student_name, "\n")] = '\0';
 
         printf("Enter roll number:\n");
         scanf("%d", &s[i].roll);
-        getchar();
 
         printf("Enter Subject 1 marks: ");
         scanf("%d", &s[i].m1);
@@ -62,7 +62,8 @@ int main()
         printf("\n2. Display Marksheet");
         printf("\n3. Search Student");
         printf("\n4. Update Marks");
-        printf("\n5. Exit");
+        printf("\n5. Delete Student");
+        printf("\n6. Exit");
 
         printf("\nEnter choice: ");
         scanf("%d", &choice);
@@ -86,13 +87,13 @@ int main()
             printf("Enter Roll Number: ");
             scanf("%d", &s[n].roll);
 
-            printf("Enter Subject 1 marks: ");
+            printf("Enter Subject 1 Marks: ");
             scanf("%d", &s[n].m1);
 
-            printf("Enter Subject 2 marks: ");
+            printf("Enter Subject 2 Marks: ");
             scanf("%d", &s[n].m2);
 
-            printf("Enter Subject 3 marks: ");
+            printf("Enter Subject 3 Marks: ");
             scanf("%d", &s[n].m3);
 
             s[n].total = s[n].m1 + s[n].m2 + s[n].m3;
@@ -101,14 +102,12 @@ int main()
             n++;
 
             printf("Student Added Successfully!");
-
             break;
 
         case 2:
 
             for (i = 0; i < n; i++)
             {
-
                 s[i].total = s[i].m1 + s[i].m2 + s[i].m3;
                 s[i].percentage = s[i].total / 3.0;
 
@@ -126,13 +125,10 @@ int main()
 
                 if (s[i].percentage >= 60)
                     printf("\nGrade : A");
-
                 else if (s[i].percentage >= 45)
                     printf("\nGrade : B");
-
                 else if (s[i].percentage >= 33)
                     printf("\nGrade : C");
-
                 else
                     printf("\nGrade : Fail");
             }
@@ -148,13 +144,9 @@ int main()
 
             for (i = 0; i < n; i++)
             {
-
                 if (s[i].roll == search)
                 {
                     found = 1;
-
-                    s[i].total = s[i].m1 + s[i].m2 + s[i].m3;
-                    s[i].percentage = s[i].total / 3.0;
 
                     printf("\nName : %s", s[i].student_name);
                     printf("\nRoll : %d", s[i].roll);
@@ -179,10 +171,8 @@ int main()
 
             for (i = 0; i < n; i++)
             {
-
                 if (s[i].roll == update)
                 {
-
                     found = 1;
 
                     printf("Enter new Subject 1 marks: ");
@@ -195,11 +185,9 @@ int main()
                     scanf("%d", &s[i].m3);
 
                     s[i].total = s[i].m1 + s[i].m2 + s[i].m3;
-
                     s[i].percentage = s[i].total / 3.0;
 
                     printf("Record Updated Successfully!");
-
                     break;
                 }
             }
@@ -211,6 +199,36 @@ int main()
 
         case 5:
 
+            found = 0;
+
+            printf("Enter roll number to delete: ");
+            scanf("%d", &del);
+
+            for (i = 0; i < n; i++)
+            {
+                if (s[i].roll == del)
+                {
+                    found = 1;
+
+                    for (j = i; j < n - 1; j++)
+                    {
+                        s[j] = s[j + 1];
+                    }
+
+                    n--;
+
+                    printf("Record Deleted Successfully!");
+                    break;
+                }
+            }
+
+            if (found == 0)
+                printf("Record not found!");
+
+            break;
+
+        case 6:
+
             printf("Exit Successfully...");
             break;
 
@@ -219,7 +237,7 @@ int main()
             printf("Invalid Choice!");
         }
 
-    } while (choice != 5);
+    } while (choice != 6);
 
     return 0;
 }
