@@ -1,4 +1,4 @@
-// Write a program to create menu- driven calculator.
+// Write a program to create menu-driven calculator.
 #include <stdio.h>
 #include <math.h>
 

@@ -1,4 +1,4 @@
-// Write a program to create menu-driven string operating system.
+// Write a program to create menu-driven string  operating system.
 
 #include <stdio.h>
 #include <string.h>

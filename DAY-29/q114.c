@@ -1,4 +1,4 @@
-// Write a program to create menu-driven array operations system.
+// Write a program to create menu-driven array  operations system.
 
 #include <stdio.h>
 
