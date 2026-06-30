@@ -1,5 +1,4 @@
 // Write a program to create bank account system.
-
 #include <stdio.h>
 #include <string.h>
 

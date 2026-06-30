@@ -1,5 +1,4 @@
 // Write a program to create ticket booking system.
-
 #include <stdio.h>
 #include <string.h>
 
